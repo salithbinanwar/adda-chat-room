@@ -6,7 +6,7 @@
   "scripts": {
     "start": "node start",
     "dev": "nodemon index",
-    "build": "tailwindcss -i ./public/input.css -o ./public/output.css --watch"
+    "tailwindBuild": "tailwindcss -i ./public/input.css -o ./public/output.css --watch"
   },
   "author": "salith",
   "license": "ISC",
