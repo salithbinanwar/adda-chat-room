@@ -1,0 +1,22 @@
+{
+  "name": "server",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "node start",
+    "dev": "nodemon index",
+    "build": "tailwindcss -i ./public/input.css -o ./public/output.css --watch"
+  },
+  "author": "salith",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.17.2",
+    "nodemon": "^2.0.15",
+    "socket.io": "^4.4.0",
+    "ws": "^8.3.0"
+  },
+  "engine": {
+    "node": "16.13.1"
+  }
+}
