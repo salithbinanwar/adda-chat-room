@@ -8,7 +8,7 @@ socket.on('message', text => {
             alt="user">
         <div class="bg-indigo-500/50 w-9/12 px-4 py-2 rounded-xl">
             <p class="text-sm text-left">${text}</p>
-            <p class="text-xs pt-.5 text-right">${new Date().toDateString()}</p>
+            <p class="text-xs pt-.5 text-right">${new Date().toLocaleTimeString('en-US', { day: 'numeric', month: 'short', hour: '2-digit', minute: '2-digit' })}</p>
         </div>
     </li>`
     document.querySelector('ul').innerHTML += el
