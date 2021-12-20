@@ -1,5 +1,5 @@
-// const socket = io('https://adda-chat.herokuapp.com/');
-const socket = io('http://localhost:8080');
+const socket = io('https://adda-chat.herokuapp.com/');
+// const socket = io('http://localhost:8080');
 
 socket.on('message', (data) => {
     console.log(data);
