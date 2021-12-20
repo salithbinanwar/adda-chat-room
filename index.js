@@ -19,9 +19,8 @@ app.get('/', (req, res) => {
 io.on('connection', (socket) => {
     console.log('an user connected');
 
-    socket.on('message', (message) => {
-        // console.log(message);
-        io.emit('message', `${message}`);
+    socket.on('message', data => {
+        io.emit('message', data);
     });
 
 });
