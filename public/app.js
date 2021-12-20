@@ -1,5 +1,5 @@
-// const socket = io('https://adda-chat.herokuapp.com/');
-const socket = io('http://localhost:8080');
+const socket = io('https://adda-chat.herokuapp.com/');
+// const socket = io('http://localhost:8080');
 
 socket.on('message', text => {
 
@@ -29,7 +29,7 @@ let name = localStorage.getItem('')
 
 
 if (localStorage.getItem("lastname") === null) {
-    let greetings = prompt()
+    let greetings = prompt("What is your name?")
     localStorage.setItem("lastname", greetings);
 }
 
