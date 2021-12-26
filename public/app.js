@@ -1,5 +1,5 @@
-const socket = io('https://adda-chat.herokuapp.com/');
-// const socket = io('http://localhost:8080');
+// const socket = io('https://adda-chat.herokuapp.com/');
+const socket = io('http://localhost:8080');
 
 socket.on('message', (data) => {
     console.log(data);
@@ -16,11 +16,19 @@ socket.on('message', (data) => {
         </div>
     </li>`
     document.querySelector('ul').innerHTML += el
-
 });
+
+socket.on("activePeo", data => {
+    document.getElementById("activeNum").innerText = data
+})
+
+
+
 
 let name = localStorage.getItem('')
 
+document.getElementById('scrollDiv').scrollIntoView({ behavior: 'smooth', block: 'end' })
+window.scrollTo(0, document.getElementById('scrollDiv').scrollHeight)
 
 if (localStorage.getItem("lastname") === null) {
     let greetings = prompt("What is your name?")

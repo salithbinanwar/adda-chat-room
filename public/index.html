@@ -9,6 +9,7 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/4.4.0/socket.io.js"
         integrity="sha512-nYuHvSAhY5lFZ4ixSViOwsEKFvlxHMU2NHts1ILuJgOS6ptUmAGt/0i5czIgMOahKZ6JN84YFDA+mCdky7dD8A=="
         crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
     <link rel="stylesheet" href="./output.css">
     <title>Adda || Inbox</title>
 </head>
@@ -16,7 +17,12 @@
 <body class="bg-gray-800 w-screen md:w-96 md:mx-auto text-white">
     <div class="relative">
         <div class="flex">
-            <h1 class=' text-[3rem] text-end'>Adda </h1>
+            <img src="./radio.svg" alt="radio" width="50" height="25" class="rounded mr-3 ml-2" srcset="">
+            <h1 class=' text-[3rem] text-end mr-24'>Adda </h1>
+            <img src="./person.svg" width="50" height="25" alt="">
+            <div class=' text-start mt-6 ml-2'>
+                <div style="font-size:1.5em">(<span id="activeNum"></span>)</div>
+            </div>
 
         </div>
 
@@ -24,7 +30,7 @@
             style="background: url('./index.svg') no-repeat center; background-size: cover;">
             <ul class="w-full">
             </ul>
-
+            <div id="scrollDiv" hidden></div>
         </div>
         <div
             class="textInput rounded-b-xl border-x-4 border-b-4 overflow-hidden border-indigo-500/50 flex items-center w-full sm:text-center lg:text-left ">
@@ -38,6 +44,7 @@
         </div>
     </div>
     <script src="./app.js"></script>
+
 </body>
 
 </html>

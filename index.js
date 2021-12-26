@@ -22,7 +22,19 @@ io.on('connection', (socket) => {
     socket.on('message', data => {
         io.emit('message', data);
     });
+    // document.getElementById('activeNum').innerHTML = socket.adapter.sids.size
+    console.log("The number of connected sockets: " + socket.adapter.sids.size);
+
+    io.emit('activePeo', socket.adapter.sids.size);
+
+    socket.on("disconnect", () => {
+        console.log(socket.id, "has left");
+        console.log(socket.adapter.sids.size)
+        io.emit('activePeo', socket.adapter.sids.size);
+    });
 
 });
+
+
 
 httpServer.listen(process.env.PORT || 8080, () => console.log('listing on http://localhost:8080'))

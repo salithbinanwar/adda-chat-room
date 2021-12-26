@@ -11,6 +11,7 @@
   "author": "salith",
   "license": "ISC",
   "dependencies": {
+    "bootstrap-icons": "^1.7.2",
     "express": "^4.17.2",
     "nodemon": "^2.0.15",
     "socket.io": "^4.4.0",
