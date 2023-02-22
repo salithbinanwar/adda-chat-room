@@ -37,4 +37,4 @@ io.on('connection', (socket) => {
 
 
 
-httpServer.listen(process.env.PORT || 8080, () => console.log('listing on http://localhost:8080'))
+httpServer.listen(process.env.PORT || 8080, () => console.log('server is live'))
